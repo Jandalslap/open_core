@@ -9,6 +9,7 @@
   box-sizing: inherit;	
 }
 
+
 /* Default html styling for each page */
 
 html {
@@ -29,4 +30,40 @@ html {
     background-color: #31424B;
 }
 
+.text_box {
+    background-color: #628395;
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+.bg_border {
+    background-color: #628395;;
+}
+
+.container p {
+    margin: 0;
+    padding: 0;
+}
+
+.img_box {
+    background-color: #31424B;
+}
+
+.text-light {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+button:hover, a:hover {
+	opacity: 0.7;
+}
+
+.nav-item.active {
+    color: #FFFFFF;
+    font-weight: bold;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
 
