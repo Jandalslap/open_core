@@ -39,7 +39,7 @@ html {
     justify-content: center;
 }
 .bg_border {
-    background-color: #628395;;
+    background-color: #628395;
 }
 
 .container p {
@@ -65,5 +65,14 @@ button:hover, a:hover {
     font-weight: bold;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-  }
+}
 
+
+  @media screen and (max-width: 900px) {
+
+.img {
+    width: 100%;
+    display: block;
+}
+
+}
