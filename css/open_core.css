@@ -25,9 +25,19 @@ html {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.order_form {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .padding {
-    padding-top:20px;
+    padding-top:23px;
     background-color: #31424B;
+}
+
+.padding2 {
+    padding-top:23px;
+    background-color: #628395;
 }
 
 .text_box {
@@ -39,16 +49,12 @@ html {
     justify-content: center;
 }
 .bg_border {
-    background-color: #628395;
+    background-color: #31424B;
 }
 
 .container p {
     margin: 0;
     padding: 0;
-}
-
-.img_box {
-    background-color: #31424B;
 }
 
 .text-light {
@@ -67,6 +73,13 @@ button:hover, a:hover {
     padding-left: 0.5rem;
 }
 
+.carousel-inner {
+    background-color: #000000;
+}
+
+.img_bg {
+    background-color: #628395;
+}
 
   @media screen and (max-width: 900px) {
 
