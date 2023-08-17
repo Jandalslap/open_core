@@ -41,7 +41,7 @@
         <div class="container-fluid bg_border px-0">
             <div class="row g-0">
                 <h1 class="heading text-center">OpX</h1>
-                <div class="col-lg-6 p-4">
+                <div class="col-lg-7 p-4">
                     <div id="carouselExampleLight" class="carousel carousel-light slide"data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -82,39 +82,55 @@
                     </div>      
                 </div>
 
-                <div class="col-lg-6 p-4">
-                    <div class="container-fluid p-4 img_bg h-100 text-center">
-                        <form action="mailto:deane_austin@hotmail.com" enctype="text/plain">
+                <div class="col-lg-5 p-4">
+                    <div class="container-fluid p-4 img_bg h-100">
+                        <form action="mailto:deane_austin@hotmail.com" action="/action_page.php" enctype="text/plain">
                             <h3 class="order_form text-center"><b>Order Form</b></h3>
-                            <h5 class="order_form">Name</h5>
-                            <input name="Subject" id="Subject" type="text" size="50" placeholder="Enter name" aria-label="Name" value="" /><br/>
-                            <h5 class="order_form">Email</h5>
-                            <input name="Email" id="Email" type="email" size="50" placeholder="Enter email" aria-label="Email"value="" /><br/>
-                            <h5 class="order_form">Address</h5>
-                            <input name="Address" id="Address" type="text" size="50" placeholder="Enter address" aria-label="Address"value="" /><br/>
-                            <h5 class="order_form">Mobile</h5>
-                            <input name="Mobile" id="Mobile" type="text" size="50" placeholder="Enter mobile" aria-label="Mobile"value="" /><br/>
-                            <h5 class="order_form">Product</h5>
-                            <select id="body" name="body" type="text" value=""><br/>
-                                <option value="No&nbsp;Product&nbsp;Selected">Select Product</option>
-                                <option value="OpX-Blue&nbsp;$499.95">OpX-Blue</option>
-                                <option value="OpX-Black&nbsp;$499.95">OpX-Black</option>
-                                <option value="OpX-Red&nbsp;$499.95">OpX-Red</option>
-                                <option value="OpX-Yellow&nbsp;$499.95">OpX-Yellow</option>
-                              </select>                           
-                            <h5 class="order_form">Quantity</h5>
-                            <select id="body" name="body" type="text" value=""><br/>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                              </select>
                             <br>
+                            <p>
+                            <label class="order_form required label">Name:</label>
+                            <input name="Subject" required id="Subject" type="text" size="67" placeholder="Enter name" aria-label="Name" value="" /><br/>
+                            </p>                    
+                            <p>
+                            <label class="order_form required label">Email:</label>
+                            <input name="Email" required id="Email" type="email" size="67" placeholder="Enter email" aria-label="Email"value="" /><br/>
+                            </p>
+                            <p>
+                            <label class="order_form required label">Address:</label>
+                            <textarea rows="3" cols="70" name="Address" required id="Address" type="text" size="70" placeholder="Enter address" aria-label="Address"value="" /></textarea>
+                            </p>
+                            <p>
+                            <label class="order_form required label">Mobile:</label>
+                            <input name="Mobile"required id="Mobile" type="number" size="30" placeholder="Enter mobile" aria-label="Mobile"value="" /><br/>
+                            </p>
+                            <p>
+                            <label class="order_form required label">Product:</label>
+                                <select id="body" name="body" required type="text" value=""><br/>
+                                    <option value="No&nbsp;Product&nbsp;Selected">Select Product</option>
+                                    <option value="OpX-Blue&nbsp;$499.95">OpX-Blue</option>
+                                    <option value="OpX-Black&nbsp;$499.95">OpX-Black</option>
+                                    <option value="OpX-Red&nbsp;$499.95">OpX-Red</option>
+                                    <option value="OpX-Yellow&nbsp;$499.95">OpX-Yellow</option>
+                                </select>  
+                            </p>       
+                            <p>            
+                            <label class="order_form required label">Quantity:</label>
+                                <select id="body" name="body" required type="text" value=""><br/>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </p>
                             <br>
+                            <div class="center_items">         
                             <input name="Submit" id="submit" type="submit" value="Submit"><br/>
+                            </div>
                             <br>
+                            <div class="center_items">   
                             <input name="Reset" id="Reset" type="reset" value="Reset" /><br />  
+                            </div>
                         </form>
                     </div>
                 </div>    
