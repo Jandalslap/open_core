@@ -30,6 +30,12 @@ html {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.heading {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px; 
+}
+
 .padding {
     padding-top:23px;
     background-color: #31424B;
