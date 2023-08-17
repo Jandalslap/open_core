@@ -96,10 +96,20 @@ button:hover, a:hover {
     background-color: #628395;
 }
 
+span {
+    background-color: #31424B;
+}
+
+hr {
+    height: 5px;
+    background-color: #31424B;
+}
+
 .form  { display: table;      }
 .p     { display: table-row;  }
 .label { display: table-cell; }
 .input { display: table-cell; }
+
 
   @media screen and (max-width: 900px) {
 
