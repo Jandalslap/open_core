@@ -110,6 +110,12 @@ hr {
 .label { display: table-cell; }
 .input { display: table-cell; }
 
+.form_border {
+    border-style: groove;
+}
+
+
+    
 
   @media screen and (max-width: 900px) {
 

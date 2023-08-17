@@ -83,38 +83,40 @@
                 </div>
 
                 <div class="col-lg-5 p-4">
-                    <div class="container-fluid p-4 img_bg h-100">
+                    <div class="container-fluid p-4 img_bg h-100 form_border">
                         <form>
                             <h3 class="order_form text-center"><b>Order Form</b></h3>
                             <hr>
                             <p>
                                 <label class="order_form required label">Name:</label>
-                                <input name="Name" required id="Name" type="text" size="67" placeholder="Enter name" aria-label="Name" value="" /><br/>
+                                <input style="width: 100%" name="Name" required id="Name" type="text" size="67" placeholder="Enter name" title="Please fill out this field." aria-label="Name" value="" /><br/>
                             </p>                    
                             <p>
                                 <label class="order_form required label">Email:</label>
-                                <input name="Email" required id="Email" type="email" size="67" placeholder="Enter email" aria-label="Email"value="" /><br/>
+                                <input style="width: 100%" name="Email" required id="Email" type="email" size="67" placeholder="Enter email" title="Please fill out this field." aria-label="Email"value="" /><br/>
                             </p>
                             <p>
                                 <label class="order_form required label">Address:</label>
-                                <textarea rows="3" cols="70" name="Address" required id="Address" type="text" size="70" placeholder="Enter address" aria-label="Address"value="" /></textarea>
+                                <textarea style="width: 100%" rows="2" cols="70" name="Address" required id="Address" type="text" size="70" placeholder="Enter address" aria-label="Address"value="" /></textarea>
                             </p>
                             <p>
                                 <label class="order_form required label">Mobile:</label>
-                                <input name="Mobile"required id="Mobile" type="tel" size="30" placeholder="Enter mobile" aria-label="Mobile"value="" /><br/>
+                                <input style="width: 50%" name="Mobile"required id="Mobile" type="tel" size="30" placeholder="Enter mobile" title="Please fill out this field." aria-label="Mobile"value="" /><br/>
                             </p>
-                            <br>
-                            <p class="text-center">
-                                <label class="order_form required">Model:</label>
-                                <select id="body" name="body" required type="text" value=""><br/>
+                            <div class="row g-0">
+                            <div class="col-lg-6 p-4">
+                                <label class="order_form required label">Model:</label>
+                                <select id="body" name="body" required type="text" title="Please select model." value=""><br/>
                                     <option value="No&nbsp;Product&nbsp;Selected">Select Model</option>
                                     <option value="OpX-8GB&nbsp;$499.95">OpX-8GB $499.95</option>
                                     <option value="OpX-16GB&nbsp;$599.95">OpX-16GB $599.95</option>
                                     <option value="OpX-32GB&nbsp;$799.95">OpX-32GB $799.95</option>
                                     <option value="OpX-64GB&nbsp;$999.95">OpX-64GB $999.95</option>
                                 </select>  
-                                <label class="order_form required">Colour:</label>
-                                <select id="body" name="body" required type="text" value=""><br/>
+                                <br>
+                                <br>
+                                <label class="order_form required label">Colour:</label>
+                                <select id="body" name="body" required type="text" title="Please select colour." value=""><br/>
                                     <option value="No&nbsp;Colour&nbsp;Selected">Select Colour</option>
                                     <option value="&nbsp;Blue">Blue</option>
                                     <option value="&nbsp;Black">Black</option>
@@ -122,25 +124,31 @@
                                     <option value="&nbsp;Yellow">Yellow</option>
                                     <option value="&nbsp;Green">Green</option>
                                 </select>  
-                                <label class="order_form required">Qty:</label>
-                                <select id="body" name="body" required type="text" value=""><br/>
+                                <br>
+                                <br>
+                                <label class="order_form required label">Qty:</label>
+                                <select id="body" name="body" required type="text" title="Please select quantity." value=""><br/>
                                     <option value="&nbsp;x&nbsp;1">1</option>
                                     <option value="&nbsp;x&nbsp;2">2</option>
                                     <option value="&nbsp;x&nbsp;3">3</option>
                                     <option value="&nbsp;x&nbsp;4">4</option>
                                     <option value="&nbsp;x&nbsp;5">5</option>
                                 </select>
+                            </div>
+                            <div class="col-lg-6 p-4">
                             </p>       
-                            <p>            
-
-                            </p>
+                            <br>
+                            <br>
+                            <br>
                             <br>
                             <div class="center_items">         
-                            <input name="Submit" id="submit" type="submit" value="Submit"><br/>
+                            <input name="Submit" id="submit" type="submit" title="Submit" value="Submit"><br/>
                             </div>                           
                             <br>
                             <div class="center_items">   
-                            <input name="Reset" id="Reset" type="reset" value="Reset" /><br />  
+                            <input name="Reset" id="Reset" type="reset" title="Reset" value="Reset" /><br />  
+                            </div>
+                            </div>
                             </div>
                         </form>
                     </div>
