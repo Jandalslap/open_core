@@ -1,28 +1,41 @@
 <!doctype html>
 
+<!-- Open Core Contact Page -->
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Open Core - OpX</title>
 
+        <!-- Browser tab title and icon -->   
+        <title>Open Core - Contact</title>
         <link rel="shortcut icon" href="images/open_core_logo.ico"/>
+
+        <!-- CSS Links -->
+        <!-- Internal css docs -->
         <link rel="stylesheet" href="css/open_core.css">
+
+        <!-- External css links -->
+        <!-- Bootstrap css -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!-- Font-Awesome - for all fab fa icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
 
     </head>
     <body>
+      <!-- Navigation bar start -->
       <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #628395;">
+        <!-- Logo -->
         <a class="navbar-brand" href="#">
             <img src="images/oc2White.png" alt="Open Core Logo" width="75" height="75">
         </a>
+        <!-- Hamburger menu for responsive design -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"> </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item"> 
                 <a class="nav-link" style="color: #FFFFFF;" href="index.html">Home</a>
             </li>
             <li class="nav-item">
@@ -31,24 +44,31 @@
             <li class="nav-item">
                 <a class="nav-link" style="color: #FFFFFF;" href="about.html">About Us</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active"> <!-- Note: 'active' menu page -->
                 <a class="nav-link" style="color: #FFFFFF;" href="contact.html">Contact</a>
             </li>
           </ul>
         </div>
       </nav>   
+      <!-- Navigation bar end -->
+
+      <!-- Container for page heading -->
       <div class="bg_border">
         <div class="container">
             <h1 class="heading text-center">Contact</h1>
         </div>
       </div>
+
+      <!-- Div for static image banner -->
       <div>
         <img class="img_width" src="images/banner.jpg" alt="Contact Banner">
       </div>
 
+      <!-- Padding for line break effect -->
       <div class="padding">
       </div>
 
+      <!-- Text box area start -->
       <div class="text_box">
         <div class="container">
           <h2 class="sub_heading">Send Us a Message</h2>
@@ -60,13 +80,19 @@
             <br>
         </div>
       </div>
+      <!-- Text box area end -->
 
+      <!-- Grid 1 start -->
       <div class="container-fluid bg_border">
+        <!-- Row 1 start -->
         <div class="row ms-auto">
+          <!-- Column 1 -->
           <div class="col-lg-6 pt-4 pr-4">
+            <!-- Container for Contact Details -->
             <div class="container-fluid p-4 img_bg h-100 form_border">
-              <h3 class="order_form text-center"><b>Contact Details</b></h3>
+              <h3 class="forms text-center"><b>Contact Details</b></h3>
               <hr>
+              <!-- Text box area start -->
               <div class="text_box">
                 <p>
                   Phone: 0800 78 78 78
@@ -91,21 +117,25 @@
                   New Zealand
                 </p>
               </div>
+              <!-- Text box area end -->
             </div>
           </div>
+          <!-- Column 2 -->
           <div class="col-lg-6 pt-4 pr-4">
+            <!-- Container for Contact Form -->
             <div class="container-fluid p-4 img_bg h-100 form_border">
+              <!-- Contact Form start -->
               <form>
-                  <h3 class="order_form text-center"><b>Contact Form</b></h3>
+                  <h3 class="forms text-center"><b>Contact Form</b></h3>
                   <hr>
-                  <label class="order_form required label">Name:</label>
-                  <input style="width: 100%" name="Name" required id="Name" type="text" size="67" placeholder="Enter name" title="Please fill out this field." aria-label="Name" value="" /><br/>
-                  <label class="order_form required label">Mobile:</label>
-                  <input style="width: 100%" name="Mobile"required id="Mobile" type="tel" size="30" placeholder="Enter mobile" title="Please fill out this field." aria-label="Mobile"value="" /><br/>
-                  <label class="order_form required label">Email:</label>
-                  <input style="width: 100%" name="Email" required id="Email" type="email" size="67" placeholder="Enter email" title="Please fill out this field." aria-label="Email"value="" /><br/>
-                  <label class="order_form required label">Message:</label>
-                  <textarea style="width: 100%" rows="5" cols="70" name="Message" required id="Message" type="text" size="70" placeholder="Enter message" aria-label="Message"value="" /></textarea>
+                  <label class="forms required label">Name:</label>
+                  <input style="width: 100%" name="Name" required id="Name" type="text" size="67" placeholder="Enter name" title="Please fill out this field." aria-label="Name" value=""><br>
+                  <label class="forms required label">Mobile:</label>
+                  <input style="width: 100%" name="Mobile"required id="Mobile" type="tel" size="30" placeholder="Enter mobile" title="Please fill out this field." aria-label="Mobile"value=""><br>
+                  <label class="forms required label">Email:</label>
+                  <input style="width: 100%" name="Email" required id="Email" type="email" size="67" placeholder="Enter email" title="Please fill out this field." aria-label="Email"value=""><br>
+                  <label class="forms required label">Message:</label>
+                  <textarea style="width: 100%" rows="5" cols="70" name="Message" required id="Message" type="text" size="70" placeholder="Enter message" aria-label="Message"value=""></textarea>
                   <br>
                   <br>
                   <div class="center_items">         
@@ -116,25 +146,32 @@
                     <input name="Reset" id="Reset" type="reset" title="Reset" value="Reset" /><br />  
                   </div>
                 </form>
+                <!-- Contact Form end -->
               </div>
             </div>
           </div>
+          <!-- Row 1 end -->
         </div>
+        <!-- Grid 1 end -->
 
+      <!-- Padding for line break effect -->
       <div class="padding">
       </div>
 
+      <!-- Footer start -->
       <footer class="text-center text-white" style="background-color: #628395";>
+        <!-- Site map links -->
         <div class="container p-4">
           <div class="row">
               <h5>
                 <a href="index.html" class="text-light nav-item">Home &nbsp;</a>                   
                 <a href="products.html" class="text-light nav-item">Products &nbsp;</a>
                 <a href="about.html" class="text-light nav-item">About Us &nbsp;</a>
-                <a href="contact.html" class="text-light nav-item active">Contact &nbsp;</a>
+                <a href="contact.html" class="text-light nav-item active">Contact &nbsp;</a> <!-- Note: 'active' link --> 
               </h5>              
           </div>
 
+        <!-- Container for social media icon links -->
         <div class="container p-4 pb-0">
           <section class="mb-4">
             <!-- Facebook -->
@@ -168,14 +205,23 @@
             ></a>
           </section>
         </div>
-          <!-- Copyright -->
+        <!-- Copyright -->
         <div class="text-center text-light";>
           © 2023 Open Core | All Rights Reserved
         </div>
-      </footer>  
+      </footer> 
+      <!-- Footer end --> 
       
+      <!-- Javascript links -->
+
+      <!-- Internal javascript file -->    
       <script> scr="js/open_core.js"</script>
+
+      <!-- External javascript links -->
+
+      <!-- Bootstrap javascript -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+      <!-- Ratufa javascript for Contact Form -->
       <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=xzafjep8&n=n1.ratufa.io"></script>
 
     </body>

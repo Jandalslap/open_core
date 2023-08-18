@@ -8,11 +8,11 @@
 *:after {
   box-sizing: inherit;	
 }
+/* Red asterix symbol for required fields in forms */
 *.required::after {
     content: ' *';
     color: red;
 }
-
 
 /* Default html styling for each page */
 
@@ -29,33 +29,38 @@ html {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.order_form {
-    color: #FFFFFF;
-    font-family: 'Times New Roman', Times, serif;
-}
-
+/* Page headings large */
 .heading {
     color: #FFFFFF;
     font-family: 'Times New Roman', Times, serif;
     font-size: 80px; 
 }
 
+/* Page sub-headings medium */
 .sub_heading {
     color: #FFFFFF;
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px; 
 }
 
+/* All p tags are this size */
+p {
+    font-size: 20pt;
+}
+
+/* Padding dark */
 .padding {
     padding-top:23px;
     background-color: #31424B;
 }
 
+/* Padding light */
 .padding2 {
     padding-top:23px;
     background-color: #628395;
 }
 
+/* Text box area defaults */
 .text_box {
     background-color: #628395;
     color: #FFFFFF;
@@ -65,34 +70,42 @@ html {
     justify-content: center;
     padding: 20px;
 }
+
+/* Background colour for borders */
 .bg_border {
     background-color: #31424B;
 }
 
-.container p {
-    margin: 0;
-    padding: 0;
-}
-
+/* h1 tags inside containers have no line space after */
 .container h1 {
     margin: 0;
     padding: 0;
 }
 
+/* p tags inside containers have no line space after */
+.container p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Alignment option */
 .center_items {
     text-align: center;
     justify-content: center;
 }
 
+/* Bootstrap override on font-family */
 .text-light {
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
 }
 
+/* Hover effect over links */
 button:hover, a:hover {
 	opacity: 0.7;
 }
 
+/* Nav bar effect on active */
 .nav-item.active {
     color: #FFFFFF;
     font-weight: bold;
@@ -100,49 +113,46 @@ button:hover, a:hover {
     padding-left: 0.5rem;
 }
 
+/* Carousel background colour */
 .carousel-inner {
     background-color: #000000;
 }
 
+/* Image background colour for padding border */
 .img_bg {
     background-color: #628395;
 }
 
+/* Default image width could not amend Bootstrap img tag */
 .img_width {
     width: 100%;
 }
 
+/* Text background colour option */
 span {
     background-color: #31424B;
 }
 
+/* Line break thickness */
 hr {
     height: 5px;
     background-color: #31424B;
 }
 
+/* Form defaults */
+.forms {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Form alignment */
 .form  { display: table;      }
 .p     { display: table-row;  }
 .label { display: table-cell; }
 .input { display: table-cell; }
 
-p {
-    font-size: 20pt;
-}
-
+/* Border for forms */
 .form_border {
     border-style: groove;
 }
 
-
-
-    
-
-  @media screen and (max-width: 900px) {
-
-.img {
-    width: 100%;
-    display: block;
-}
-
-}
