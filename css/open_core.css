@@ -40,6 +40,12 @@ html {
     font-size: 80px; 
 }
 
+.sub_heading {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px; 
+}
+
 .padding {
     padding-top:23px;
     background-color: #31424B;
@@ -57,6 +63,7 @@ html {
     font-size: 20px;
     text-align: center;
     justify-content: center;
+    padding: 20px;
 }
 .bg_border {
     background-color: #31424B;
@@ -118,6 +125,10 @@ hr {
 .p     { display: table-row;  }
 .label { display: table-cell; }
 .input { display: table-cell; }
+
+p {
+    font-size: 20pt;
+}
 
 .form_border {
     border-style: groove;
