@@ -67,6 +67,11 @@ html {
     padding: 0;
 }
 
+.container h1 {
+    margin: 0;
+    padding: 0;
+}
+
 .center_items {
     text-align: center;
     justify-content: center;
@@ -96,6 +101,10 @@ button:hover, a:hover {
     background-color: #628395;
 }
 
+.img_width {
+    width: 100%;
+}
+
 span {
     background-color: #31424B;
 }
@@ -113,6 +122,7 @@ hr {
 .form_border {
     border-style: groove;
 }
+
 
 
     
