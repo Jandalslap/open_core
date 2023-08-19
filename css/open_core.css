@@ -1,4 +1,3 @@
-
 /* Default CSS Style Sheet for Open Core Website */
 
 /* Overall page behaviour */
@@ -128,11 +127,6 @@ button:hover, a:hover {
     width: 100%;
 }
 
-/* Text background colour option */
-span {
-    background-color: #31424B;
-}
-
 /* Line break thickness */
 hr {
     height: 5px;
@@ -155,4 +149,6 @@ hr {
 .form_border {
     border-style: groove;
 }
+
+
 
