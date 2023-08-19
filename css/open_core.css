@@ -122,6 +122,22 @@ button:hover, a:hover {
     background-color: #628395;
 }
 
+/* Image transform effect for thumbnail class */
+.thumbnail img:hover {
+    transform: scale(1.05);
+    width: 100%;
+}
+
+/* Image transition effect for thumbnail class */
+.thumbnail img {
+    transition: all 0.3s ease 0s;
+}
+
+/* Image hide overflow effect for thumbnail class */
+.thumbnail {
+    overflow: hidden;
+}
+
 /* Default image width could not amend Bootstrap img tag */
 .img_width {
     width: 100%;
