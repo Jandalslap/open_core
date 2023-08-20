@@ -41,6 +41,14 @@ html {
     text-shadow: 2px 2px 4px #000000;
 }
 
+/* Page sub-headings small */
+.sub_heading2 {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px; 
+    text-shadow: 2px 2px 4px #000000;
+}
+
 /* All p tags are this size */
 p {
     font-size: 20pt;
@@ -121,6 +129,11 @@ button:hover, a:hover {
     background-color: #628395;
 }
 
+/* Image background colour for transparent images */
+.img_bg2 {
+    background-color: #000000;
+}
+
 /* Image transform effect for thumbnail class */
 .thumbnail img:hover {
     transform: scale(1.05);
@@ -171,9 +184,9 @@ hr {
     bottom: auto;
 }
 
-/* Span option for font-size */
+/* Span option for font-size medium */
 span2 {
-    font-size: 10pt;
+    font-size: 15pt;
 }
 
 /* Span option for removing bold text */
@@ -181,8 +194,14 @@ span3 {
     font-weight: normal;
 }
 
+/* Span option for font-size large */
 span4 {
     font-size: 20pt;
+}
+
+/* Span option for font-size small */
+span5 {
+    font-size: 10pt;
 }
 
 /* Video container for product demo */
@@ -202,4 +221,21 @@ span4 {
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Rounded corners for Buy button */
+.buy_button {
+    border-radius: 8px;
+}
+
+/* Remove underlines from links and style colour */
+p a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Alignment for specifications disclaimer */
+.disclaimer {
+    text-align: left;
+    bottom:0;
 }
