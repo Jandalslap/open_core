@@ -181,6 +181,10 @@ span3 {
     font-weight: normal;
 }
 
+span4 {
+    font-size: 20pt;
+}
+
 /* Video container for product demo */
 .video_container {
     position: relative;
