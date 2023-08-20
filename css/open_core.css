@@ -223,9 +223,11 @@ span5 {
     height: 100%;
 }
 
-/* Rounded corners for Buy button */
+/* Style for buy button */
 .buy_button {
-    border-radius: 8px;
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 /* Remove underlines from links and style colour */
