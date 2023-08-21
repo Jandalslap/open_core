@@ -19,5 +19,14 @@ LName.addEventListener('input', function() {
   LName.value = onlyLetters;
 });
 
+/* Preloader which tells the user the website is loading rather than showing a blank page  */
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 2000);
+});
+
 
 
