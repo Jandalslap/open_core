@@ -111,15 +111,27 @@
                         <form>
                             <h3 class="forms text-center"><b>Order Form</b></h3>
                             <hr>
-                            <label class="forms required label">Name:</label>
-                            <input style="width: 100%" name="Name" required id="Name" type="text" size="67" placeholder="Enter name" title="Please fill out this field." aria-label="Name" value=""><br>
+                            <!-- Row 1 start -->
+                            <div class="row g-0">
+                            <!-- Column 1 -->
+                                <div class="col-lg-6">
+                                    <label class="forms required label">First Name:</label>
+                                     <input class="f_name" style="width: 95%" name="FName" required id="FName" type="text" size="67" placeholder="Enter first name" title="Please fill out this field." aria-label="FName" value=""><br>
+                                </div>
+                                <!-- Column 2 start -->
+                                <div class="col-lg-6">
+                                    <label class="forms required label">Last Name:</label>
+                                     <input style="width: 100%" name="LName" required id="LName" type="text" size="67" placeholder="Enter last name" title="Please fill out this field." aria-label="LName" value=""><br>
+                                </div>
+                            </div>
+                            <!-- Row 1 end -->
                             <label class="forms required label">Email:</label>
                             <input style="width: 100%" name="Email" required id="Email" type="email" size="67" placeholder="Enter email" title="Please fill out this field." aria-label="Email"value=""><br>
                             <label class="forms required label">Address:</label>
                             <textarea style="width: 100%" rows="2" cols="70" name="Address" required id="Address" type="text" size="70" placeholder="Enter address" aria-label="Address"value=""></textarea>
                             <label class="forms required label">Mobile:</label>
                             <input style="width: 50%" name="Mobile"required id="Mobile" type="tel" size="30" placeholder="Enter mobile" title="Please fill out this field." aria-label="Mobile"value=""><br>
-                            <!-- Row 1 start -->
+                            <!-- Row 2 start -->
                             <div class="row g-0">
                                 <!-- Column 1 -->
                                 <div class="col-lg-6 p-4">
@@ -164,7 +176,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Row 1 end -->
+                            <!-- Row 2 end -->
                         </form>
                         <!-- Order Form end -->
                     </div>
