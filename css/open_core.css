@@ -251,13 +251,23 @@ p a{
         width: 50% !important;
     }
 
+    /* Adjust last name field size for small screen inline */
+    .l_name {
+        width: 50% !important;
+    }
+
 }
 
 @media screen and (max-width: 991px) {
 
     /* Adjust first name field size for medium screen inline */
     .f_name {
-        width: 100% !important;
+        width: 50% !important;
+    }
+
+    /* Adjust last name field size for medium screen inline */
+    .l_name {
+        width: 50% !important;
     }
 
 }
