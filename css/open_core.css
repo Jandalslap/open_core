@@ -248,11 +248,16 @@ p a{
 
     /* Adjust first name field size for small screen inline */
     .f_name {
-        width: 50% !important;
+        width: 100% !important;
     }
 
     /* Adjust last name field size for small screen inline */
     .l_name {
+        width:100% !important;
+    }
+
+    /* Adjust last name field size for small screen inline */
+    .mobile {
         width: 50% !important;
     }
 
