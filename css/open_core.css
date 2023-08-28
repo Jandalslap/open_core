@@ -257,21 +257,21 @@ p a{
     bottom:0;
 }
 
+/* Container for images with buy buttons */
 .container_buy {
     position: relative;
-
-	
 }
 
+/* Styling for the buy buttons on the home page images */
 .button{
-position: absolute;
-font-weight: bold;
-background-color: transparent;
-border-radius: 16px;
-bottom: 10px;
-left: 43.75%;
-width: 50px;
-padding: 0px;
+    position: absolute;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 16px;
+    bottom: 10px;
+    left: 43.75%;
+    width: 50px;
+    padding: 0px;
 }
 
 
