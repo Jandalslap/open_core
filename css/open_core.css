@@ -269,9 +269,9 @@ p a{
     background-color: transparent;
     border-radius: 16px;
     bottom: 10px;
-    left: 43.75%;
+    left: 43.75%; /* Margin % to keep buy button centered. 50px(button)/400px(container) 12.5%/2. */
     width: 50px;
-    padding: 0px;
+    padding: 0px; /* Needed this to be in place for Safari browser */
 }
 
 
