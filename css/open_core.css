@@ -270,8 +270,8 @@ background-color: transparent;
 border-radius: 16px;
 bottom: 10px;
 left: 43.75%;
-right: 43.75%;
 width: 50px;
+text-align: center !important;
 }
 
 
