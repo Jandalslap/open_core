@@ -257,6 +257,22 @@ p a{
     bottom:0;
 }
 
+.container_buy {
+    position: relative;
+
+	
+  }
+
+  .button{
+    position: absolute;
+    font-weight: bold;
+    background-color: transparent;
+	border-radius: 16px;
+	bottom: 10px;
+	left: 200px;
+	width: 100px;
+  }
+
 
 @media screen and (max-width: 980px) {
 
