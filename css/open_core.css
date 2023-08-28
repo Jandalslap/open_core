@@ -203,6 +203,7 @@ span4 {
 /* Span option for font-size small */
 span5 {
     font-size: 10pt;
+    color: #FFFFFF;
 }
 
 /* Span option for font style cents */
@@ -210,6 +211,12 @@ span6 {
     font-size: 10pt;
     vertical-align:super;
     color: #FFFFFF;
+}
+
+/* Span option for font style * required fields */
+span7 {
+    color: red;
+    font-size: 10pt;
 }
 
 /* Video container for product demo */
