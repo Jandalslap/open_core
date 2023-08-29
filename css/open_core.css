@@ -51,7 +51,7 @@ html {
 
 /* All p tags are this size */
 p {
-    font-size: 20pt;
+    font-size: 18pt;
 }
 
 /* Padding dark */
@@ -71,7 +71,7 @@ p {
     background-color: #628395;
     color: #FFFFFF;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     justify-content: center;
     padding: 20px;
