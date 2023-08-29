@@ -187,7 +187,12 @@ hr {
 
 /* Span option for font-size medium */
 span2 {
-    font-size: 15pt;
+    font-size: 15pt !important;
+}
+
+/* Style for line spacing in specifications text box */
+.line_space {
+    line-height: 100%;
 }
 
 /* Span option for removing bold text */
