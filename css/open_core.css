@@ -265,9 +265,8 @@ p a{
 /* Styling for the buy buttons on the home page images */
 .button{
     position: absolute;
-    font-weight: bold;
-    background-color: transparent;
-    border-radius: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 8px;
     bottom: 10px;
     left: 43.75%; /* Margin % to keep buy button centered. 50px(button)/400px(container) 12.5%/2. */
     width: 50px;
