@@ -307,6 +307,7 @@ p a{
 }
 */
 
+/* Set display to none for these buttons when required */
 #checkout, #clear-cart, #reset-form {
     display: none;
     margin: auto;

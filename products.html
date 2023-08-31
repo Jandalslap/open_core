@@ -136,10 +136,14 @@
                             <input style="width: 100%" name="Email" required id="Email" type="email" size="67" placeholder="Enter email" title="Please fill out this field." aria-label="Email"value=""><br>
                             <label class="forms required label">Address:</label>
                             <textarea style="width: 100%" rows="2" cols="70" name="Address" required id="Address" type="text" size="70" placeholder="Enter address" aria-label="Address"value=""></textarea>
-                            <label class="forms required label">Mobile:</label>
-                            <input style="width: 50%" name="Mobile"required id="Mobile" type="tel" size="30" placeholder="Enter mobile" title="Please fill out this field." aria-label="Mobile"value=""><br>
+                                                       
                             <!-- Row 2 start -->
                             <div class="row g-0">
+                                <div class="col-sm-4 p-4">
+                                    <label class="forms required label">Mobile:</label>
+                                    <input style="width: 100%" name="Mobile"required id="Mobile" type="tel" size="30" placeholder="Enter mobile" title="Please fill out this field." aria-label="Mobile"value=""><br>
+                                    <p><i><span7>*</span7><span5> Fields Required</span5></i></p>
+                                </div>
                                 <div class="col-sm-4 p-4">
                                     <label class="forms required label">Model:</label>
                                     <select id="model" name="body" required type="text" title="Please select model." value=""><br/>                                  
@@ -148,7 +152,8 @@
                                         <option value="OpX-32GB&nbsp;$799.95">OpX-32GB $799.95</option>
                                         <option value="OpX-64GB&nbsp;$999.95">OpX-64GB $999.95</option>
                                     </select>  
-                                    <br>
+                                </div>
+                                <div class="col-sm-2 p-4">
                                     <label class="forms required label">Colour:</label>
                                     <select id="colour" name="body" required type="text" title="Please select colour." value=""><br/>                                   
                                         <option value="&nbsp;Blue">Blue</option>
@@ -157,7 +162,8 @@
                                         <option value="&nbsp;Yellow">Yellow</option>
                                         <option value="&nbsp;Green">Green</option>
                                     </select>  
-                                    <br>
+                                </div>
+                                <div class="col-sm-2 p-4">
                                     <label class="forms required label">Qty:</label>
                                     <select id="quantity" name="body" required type="text" title="Please select quantity." value=""><br/>
                                         <option value="&nbsp;x&nbsp;1">1</option>
@@ -166,9 +172,6 @@
                                         <option value="&nbsp;x&nbsp;4">4</option>
                                         <option value="&nbsp;x&nbsp;5">5</option>
                                     </select>
-                                    <div>
-                                        <p><i><span7>*</span7><span5> Field Required</span5></i></p>
-                                    </div>
                                 </div>
                                 <div class="center_items">         
                                     <input name="AddToCart" id="add-to-cart" type="submit" title="Add to Cart" value="Add to Cart"><br />
@@ -191,13 +194,13 @@
 								<!-- Cart items will be dynamically added here using JavaScript -->								
 							</div>
                             <div class="row">
-                                <div class="center_items col-sm-4 p-4">
+                                <div class="center_items col-sm-4 p-2">
                                     <input name="Checkout" id="checkout" type="submit" title="Checkout" value="Checkout">
                                 </div>
-                                <div class="center_items col-sm-4 p-4">
+                                <div class="center_items col-sm-4 p-2">
                                     <input type="button" id="reset-form" title="Reset Form" value="Reset Form">
                                 </div>
-                                <div class="center_items col-sm-4 p-4">
+                                <div class="center_items col-sm-4 p-2">
                                     <input name="ClearCart" id="clear-cart" type="button" title="Clear Cart" value="Clear Cart">
                                 </div>
                             </div>

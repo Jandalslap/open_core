@@ -62,7 +62,8 @@ function clearCart() {
 		item.remove();
 	});
 }
-	
+
+// Event listener for clear cart button
 clearCartButton.addEventListener('click', function(event) {
 	event.preventDefault();
 
@@ -102,10 +103,23 @@ document.getElementById('checkout').addEventListener('click', function(event) {
         return;
     }
 
+	// Check phone number length
+    if (mobile.length !== 10) {
+        alert('Phone number should be 10 digits.');
+        return;
+    }
+
+    // Check email syntax
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
 	// Hide the cart container after checkout
     cartItemsContainer.style.display = 'none';
 
-	// If the cart is not empty and the first form is filled, trigger the hidden submit button in the first form
+	// If the cart is not empty and the first form is filled in correctly, trigger the hidden submit button in the first form
 	document.getElementById('hidden-submit').click();
 	
 	// Hide the checkout and clear cart buttons after checkout
