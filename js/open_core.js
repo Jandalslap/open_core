@@ -103,11 +103,7 @@ const cartItemsHidden = document.getElementById('cart-items-hidden');
 cartItemsHidden.value = cartItemsData.join(';   ');
 }
 
-// Check if all three dropdowns have selections
-if (modelSelect.value === '' || colourSelect.value === '' || quantitySelect.value === '') {
-	alert('Please select a model, a colour, and a quantity before adding to cart.');
-	return;
-}
+
 	
 	
 // External form listener for second form	
