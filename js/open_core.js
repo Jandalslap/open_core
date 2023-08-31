@@ -22,4 +22,3 @@ LName.addEventListener('input', function() {
 
 
 
-
