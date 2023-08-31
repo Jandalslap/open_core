@@ -24,6 +24,8 @@ LName.value = onlyLetters;
 const addToCartButton = document.getElementById('add-to-cart');
 const cartItemsContainer = document.querySelector('.cart-items');
 const clearCartButton = document.getElementById('clear-cart');
+const resetFormButton = document.getElementById('reset-form');
+const checkoutButton = document.getElementById('checkout');
 
 addToCartButton.addEventListener('click', function(event) {
 	event.preventDefault();
@@ -45,6 +47,11 @@ addToCartButton.addEventListener('click', function(event) {
 	
 	// Update the hidden cart items field after adding items to the cart
 	updateCartItemsHidden();
+
+	// Show the checkout and clear cart buttons
+	checkoutButton.style.display = 'block';
+	clearCartButton.style.display = 'block';
+	resetFormButton.style.display = 'block';
 	
 });
 	
@@ -83,10 +90,27 @@ document.getElementById('checkout').addEventListener('click', function(event) {
 		return;
 	}
 
-	// If the cart is not empty, trigger the hidden submit button in the first form
+	// Check if the first form is filled out
+    const firstName = document.getElementById('FName').value;
+    const lastName = document.getElementById('LName').value;
+    const email = document.getElementById('Email').value;
+    const address = document.getElementById('Address').value;
+    const mobile = document.getElementById('Mobile').value;
+    
+    if (!firstName || !lastName || !email || !address || !mobile) {
+        alert('Please fill out all required fields in the order form.');
+        return;
+    }
+
+	// Hide the cart container after checkout
+    cartItemsContainer.style.display = 'none';
+
+	// If the cart is not empty and the first form is filled, trigger the hidden submit button in the first form
 	document.getElementById('hidden-submit').click();
 	
-	clearCart();
+	// Hide the checkout and clear cart buttons after checkout
+	document.getElementById('checkout').style.display = 'none';
+	document.getElementById('clear-cart').style.display = 'none';
 	
 });
 

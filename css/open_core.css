@@ -307,6 +307,11 @@ p a{
 }
 */
 
+#checkout, #clear-cart, #reset-form {
+    display: none;
+    margin: auto;
+}
+
 @media screen and (max-width: 980px) {
 
     /* Adjust first name field size for small screen inline */
