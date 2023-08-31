@@ -23,6 +23,11 @@
 
     </head>
     <body>
+    <!--<div id="loading-screen" class="loading-screen"> -->         
+    <!--    <div class="loading-spinner"> -->
+            <!-- Your loading content goes here -->
+    <!--    </div> -->
+    <!-- </div> -->
         <!-- Navigation bar start -->
         <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #628395;">
             <!-- Logo -->
@@ -108,13 +113,15 @@
                     <!-- Container for Order Form -->
                     <div class="container-fluid p-4 img_bg h-100 form_border">
                         <!-- Order Form start -->
-                        <form>
+                        <form id="order_form" action="submit_form1.php" method="post">
                             <h3 class="forms text-center"><b>Order Form</b></h3>
                             <hr>
                             <!-- Row 1 start -->
                             <div class="row g-0">
                             <!-- Column 1 -->
                                 <div class="col-sm-6">
+									<!-- Hidden input from cart items to export with order form -->
+									<input type="hidden" id="cart-items-hidden" name="cart-items-hidden" type="text" value="">
                                     <label class="forms required label">First Name:</label>
                                      <input class="f_name" style="width: 95%" name="FName" required id="FName" type="text" size="67" placeholder="Enter first name" title="Please fill out this field." aria-label="FName" value=""><br>
                                 </div>
@@ -136,7 +143,7 @@
                                 <!-- Column 1 -->
                                 <div class="col-lg-6 p-4">
                                     <label class="forms required label">Model:</label>
-                                    <select id="body" name="body" required type="text" title="Please select model." value=""><br/>
+                                    <select id="model" name="body" required type="text" title="Please select model." value=""><br/>
                                         <option value="" disabled>Select Model</option>
                                         <option value="OpX-8GB&nbsp;$499.95">OpX-8GB $499.95</option>
                                         <option value="OpX-16GB&nbsp;$599.95">OpX-16GB $599.95</option>
@@ -145,7 +152,7 @@
                                     </select>  
                                     <br>
                                     <label class="forms required label">Colour:</label>
-                                    <select id="body" name="body" required type="text" title="Please select colour." value=""><br/>
+                                    <select id="colour" name="body" required type="text" title="Please select colour." value=""><br/>
                                         <option value="" disabled>Select Colour</option>
                                         <option value="&nbsp;Blue">Blue</option>
                                         <option value="&nbsp;Black">Black</option>
@@ -155,7 +162,7 @@
                                     </select>  
                                     <br>
                                     <label class="forms required label">Qty:</label>
-                                    <select id="body" name="body" required type="text" title="Please select quantity." value=""><br/>
+                                    <select id="quantity" name="body" required type="text" title="Please select quantity." value=""><br/>
                                         <option value="" disabled>Select Qty</option>
                                         <option value="&nbsp;x&nbsp;1">1</option>
                                         <option value="&nbsp;x&nbsp;2">2</option>
@@ -164,27 +171,44 @@
                                         <option value="&nbsp;x&nbsp;5">5</option>
                                     </select>
                                     <br>
-                                    <br>
                                     <div>
                                         <p><i><span7>*</span7><span5> Field Required</span5></i></p>
                                     </div>
                                 </div>
                                 <!-- Column 2 -->
                                 <div class="col-lg-6 p-4">      
-                                    <br>
+									<br>
                                     <br>
                                     <div class="center_items">         
-                                        <input name="Submit" id="submit" type="submit" title="Submit" value="Submit"><br/>
+                                        <input name="AddToCart" id="add-to-cart" type="submit" title="Add to Cart" value="Add to Cart"><br />
                                     </div>                           
-                                        <br>
+                                    <br>
                                     <div class="center_items">   
                                         <input name="Reset" id="Reset" type="reset" title="Reset" value="Reset" /><br />  
                                     </div>
-                                </div>
+									<!-- Hidden submit button that triggers order form submission after checkout -->
+									<input type="submit" id="hidden-submit" style="display: none;">
+								</div>								
                             </div>
                             <!-- Row 2 end -->
                         </form>
                         <!-- Order Form end -->
+					
+						<!-- Cart Form start -->
+						<form id="cart_form">
+							<h3 class="forms text-center"><b>Shopping Cart</b></h3>
+							<hr>
+							<!-- Cart items will be displayed here -->
+							<div class="cart-items cart_box">
+								<!-- Cart items will be dynamically added here using JavaScript -->								
+							</div>
+							<div class="center_items">
+								<input name="Checkout" id="checkout" type="submit" title="Checkout" value="Checkout">
+								<input name="ClearCart" id="clear-cart" type="button" title="Clear Cart" value="Clear Cart">
+								<input type="button" id="refresh-form" title="Refresh Form" value="Refresh Form">
+							</div>
+						</form>
+						<!-- Cart Form end -->
                     </div>
                 </div>    
             </div>
@@ -256,7 +280,7 @@
                 <!-- Column 2 -->
                 <div class="col-lg-6 pt-4 pr-4">
                     <div class="video_container">
-                        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/dm81YmIyBGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="responsive-iframe" src="media/OCvid.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -326,8 +350,8 @@
 
         <!-- Bootstrap javascript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        <!-- Ratufa javascript for Order Form -->
-        <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=ia8ppgas&n=n1.ratufa.io"></script>
+      <!-- Ratufa javascript for Cart Form Form -->
+      <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=order_form&f=ia8ppgas&n=n1.ratufa.io"></script>
 
     </body>
 
