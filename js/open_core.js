@@ -103,11 +103,11 @@ document.getElementById('checkout').addEventListener('click', function(event) {
         return;
     }
 
-	// Check phone number length
-    if (mobile.length !== 10) {
-        alert('Phone number should be 10 digits.');
-        return;
-    }
+	// Check phone number length (6 to 12 digits)
+	if (mobile.length < 6 || mobile.length > 12) {
+		alert('Phone number should be between 6 and 12 digits and contain only numbers.');
+		return;
+	}
 
     // Check email syntax
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
