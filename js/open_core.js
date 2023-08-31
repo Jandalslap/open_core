@@ -67,7 +67,7 @@ clearCartButton.addEventListener('click', function(event) {
 });	
 
 // Refresh form listener that reloads page
-document.getElementById('refresh-form').addEventListener('click', function() {
+document.getElementById('reset-form').addEventListener('click', function() {
 	location.reload();
 });
 
@@ -101,6 +101,12 @@ cartItems.forEach(item => {
 
 const cartItemsHidden = document.getElementById('cart-items-hidden');
 cartItemsHidden.value = cartItemsData.join(';   ');
+}
+
+// Check if all three dropdowns have selections
+if (modelSelect.value === '' || colourSelect.value === '' || quantitySelect.value === '') {
+	alert('Please select a model, a colour, and a quantity before adding to cart.');
+	return;
 }
 	
 	

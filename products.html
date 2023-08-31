@@ -179,13 +179,12 @@
                                 <div class="col-lg-6 p-4">      
 									<br>
                                     <br>
+                                    <br>
                                     <div class="center_items">         
                                         <input name="AddToCart" id="add-to-cart" type="submit" title="Add to Cart" value="Add to Cart"><br />
                                     </div>                           
                                     <br>
-                                    <div class="center_items">   
-                                        <input name="Reset" id="Reset" type="reset" title="Reset" value="Reset" /><br />  
-                                    </div>
+
 									<!-- Hidden submit button that triggers order form submission after checkout -->
 									<input type="submit" id="hidden-submit" style="display: none;">
 								</div>								
@@ -202,11 +201,17 @@
 							<div class="cart-items cart_box">
 								<!-- Cart items will be dynamically added here using JavaScript -->								
 							</div>
-							<div class="center_items">
+                            <div class="row">
+							<div class="center_items col-sm-4">
 								<input name="Checkout" id="checkout" type="submit" title="Checkout" value="Checkout">
+                            </div>
+                            <div class="center_items col-sm-4">
 								<input name="ClearCart" id="clear-cart" type="button" title="Clear Cart" value="Clear Cart">
-								<input type="button" id="refresh-form" title="Refresh Form" value="Refresh Form">
+                            </div>
+                            <div class="center_items col-sm-4">
+								<input type="button" id="reset-form" title="Reset Form" value="Reset Form">
 							</div>
+                            </div>
 						</form>
 						<!-- Cart Form end -->
                     </div>
