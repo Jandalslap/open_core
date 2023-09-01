@@ -5,18 +5,18 @@
 const FName = document.getElementById('FName');
 
 FName.addEventListener('input', function() {
-const inputValue = FName.value;
-const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
-FName.value = onlyLetters;
+	const inputValue = FName.value;
+	const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
+	FName.value = onlyLetters;
 });
 
 /* Allow only alphabet letters in form Last Name fields */
 const LName = document.getElementById('LName');
 
 LName.addEventListener('input', function() {
-const inputValue = LName.value;
-const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
-LName.value = onlyLetters;
+	const inputValue = LName.value;
+	const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
+	LName.value = onlyLetters;
 });
 
 
@@ -103,11 +103,11 @@ document.getElementById('checkout').addEventListener('click', function(event) {
         return;
     }
 
-	// Check phone number length (6 to 12 digits)
-	if (mobile.length < 6 || mobile.length > 12) {
-		alert('Phone number should be between 6 and 12 digits and contain only numbers.');
-		return;
-	}
+	// Check phone number length (minimum 7 digits)
+	if (mobile.length < 7) {
+    alert('Phone number should be at least 7 digits.');
+    return;
+}
 
     // Check email syntax
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -125,16 +125,20 @@ document.getElementById('checkout').addEventListener('click', function(event) {
 	// Hide the checkout and clear cart buttons after checkout
 	document.getElementById('checkout').style.display = 'none';
 	document.getElementById('clear-cart').style.display = 'none';
+
+	// Hide the cart heading
+    const cartHeading = document.getElementById('cart-heading');
+    cartHeading.style.display = 'none';
 	
 });
 
 // Function to update the hidden cart items field
 function updateCartItemsHidden() {
-const cartItems = document.querySelectorAll('.cart-item');
-const cartItemsData = [];
+	const cartItems = document.querySelectorAll('.cart-item');
+	const cartItemsData = [];
 
-cartItems.forEach(item => {
-	cartItemsData.push(item.textContent.trim());
+	cartItems.forEach(item => {
+		cartItemsData.push(item.textContent.trim());
 });
 
 const cartItemsHidden = document.getElementById('cart-items-hidden');
