@@ -80,7 +80,7 @@ document.getElementById('reset-form').addEventListener('click', function() {
 });
 
 
-// Checkout listener and check cart not empty
+// Checkout listener and order form validation
 document.getElementById('checkout').addEventListener('click', function(event) {
 	// Prevent the default form submission behavior
 	event.preventDefault();
@@ -107,7 +107,7 @@ document.getElementById('checkout').addEventListener('click', function(event) {
 	if (mobile.length < 7) {
     alert('Phone number should be at least 7 digits.');
     return;
-}
+	}
 
     // Check email syntax
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -145,10 +145,8 @@ const cartItemsHidden = document.getElementById('cart-items-hidden');
 cartItemsHidden.value = cartItemsData.join(';   ');
 }
 
-
 	
-	
-// External form listener for second form	
+// External form listener for inner form (cart-form)
 window.addEventListener("load", function() {
 window.RatufaContainer.loadForm({
 	clientFormID: "cart_form",
