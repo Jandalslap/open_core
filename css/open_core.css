@@ -288,24 +288,21 @@ p a{
     padding: 0px; /* Needed this to be in place for Safari browser */
 }
 
-/*
+/* Preloading screen image */
 .loading-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #628395;
     display:flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
 }
 
-.loading-spinner {
 
-}
-*/
 
 /* Set display to none for these buttons when required */
 #checkout, #clear-cart, #reset-form {

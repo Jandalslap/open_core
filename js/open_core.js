@@ -162,6 +162,9 @@ window.addEventListener('load', function() {
   const loadingScreen = document.getElementById('loading-screen');
   setTimeout(function() {
       loadingScreen.style.display = 'none';
-  }, 3000); // 3000 milliseconds = 3 seconds
+  }, 2000); // 3000 milliseconds = 3 seconds
 });
+
+
+
 
