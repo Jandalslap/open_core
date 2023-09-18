@@ -279,7 +279,7 @@
                 <!-- Column 2 -->
                 <div class="col-lg-6 pt-4 pr-4">
                     <div class="video_container">
-                        <iframe class="responsive-iframe" src="media\demo.GIF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="responsive-iframe" src="media\OCvid.mp4" title="Op-X Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -344,13 +344,34 @@
 
         <!-- Internal javascript file -->
         <script src="js/open_core.js"></script>
+        <!-- Script removed from js file for conflict reasons - multiple load event listeners -->
+        <script>          
+            /* Allow only alphabet letters in form First Name fields */
+            const FName = document.getElementById('FName');
+
+            FName.addEventListener('input', function() {
+                const inputValue = FName.value;
+                const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
+                FName.value = onlyLetters;
+            });
+
+            /* Allow only alphabet letters in form Last Name fields */
+            const LName = document.getElementById('LName');
+
+            LName.addEventListener('input', function() {
+                const inputValue = LName.value;
+                const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
+                LName.value = onlyLetters;
+            });
+        </script>
 
         <!-- External javascript links -->
 
         <!-- Bootstrap javascript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-      <!-- Ratufa javascript for Cart Form Form -->
-      <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=order_form&f=ia8ppgas&n=n1.ratufa.io"></script>
+        <!-- Ratufa javascript for forms -->
+        <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=order_form&f=ia8ppgas&n=n1.ratufa.io"></script>
+        <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?i=cart_form&f=cdznuino&n=n1.ratufa.io"></script>
 
     </body>
 

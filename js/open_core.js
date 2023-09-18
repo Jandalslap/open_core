@@ -1,24 +1,79 @@
-
 /* Javascript for Open Core Website */
 
-/* Allow only alphabet letters in form First Name fields */
-const FName = document.getElementById('FName');
 
-FName.addEventListener('input', function() {
-	const inputValue = FName.value;
-	const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
-	FName.value = onlyLetters;
+// Hide the loading screen when the page is fully loaded
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+      loadingScreen.style.display = 'none';
+	}, 2000); // 2000 milliseconds = 3 seconds
 });
 
-/* Allow only alphabet letters in form Last Name fields */
-const LName = document.getElementById('LName');
 
-LName.addEventListener('input', function() {
-	const inputValue = LName.value;
-	const onlyLetters = inputValue.replace(/[^A-Za-z]/g, '');
-	LName.value = onlyLetters;
+// Function to update the hidden cart items field
+function updateCartItemsHidden() {
+	const cartItems = document.querySelectorAll('.cart-item');
+	const cartItemsData = [];
+
+	cartItems.forEach(item => {
+		cartItemsData.push(item.textContent.trim());
 });
 
+const cartItemsHidden = document.getElementById('cart-items-hidden');
+cartItemsHidden.value = cartItemsData.join(';   ');
+}
+
+// Checkout listener and order form validation
+document.getElementById('checkout').addEventListener('click', function(event) {
+	// Prevent the default form submission behavior
+	event.preventDefault();
+	
+	const cartItems = document.querySelectorAll('.cart-item');
+	if (cartItems.length === 0) {
+		alert('Your cart is empty. Please add items to your cart before checking out.');
+		return;
+	}
+
+	// Check if the first form is filled out
+	const firstName = document.getElementById('FName').value;
+	const lastName = document.getElementById('LName').value;
+	const email = document.getElementById('Email').value;
+	const address = document.getElementById('Address').value;
+	const mobile = document.getElementById('Mobile').value;
+	
+	if (!firstName || !lastName || !email || !address || !mobile) {
+		alert('Please fill out all required fields in the order form.');
+		return;
+	}
+
+	// Check phone number length (minimum 7 digits)
+	if (mobile.length < 7) {
+	alert('Phone number should be at least 7 digits.');
+	return;
+	}
+
+	// Check email syntax
+	const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	if (!email.match(emailPattern)) {
+		alert('Please enter a valid email address.');
+		return;
+	}
+
+	// Hide the cart container after checkout
+	cartItemsContainer.style.display = 'none';
+
+	// If the cart is not empty and the first form is filled in correctly, trigger the hidden submit button in the first form
+	document.getElementById('hidden-submit').click();
+	
+	// Hide the checkout and clear cart buttons after checkout
+	document.getElementById('checkout').style.display = 'none';
+	document.getElementById('clear-cart').style.display = 'none';
+
+	// Hide the cart heading
+	const cartHeading = document.getElementById('cart-heading');
+	cartHeading.style.display = 'none';
+	
+});
 
 // JavaScript code for adding items to the cart
 const addToCartButton = document.getElementById('add-to-cart');
@@ -79,91 +134,6 @@ document.getElementById('reset-form').addEventListener('click', function() {
 	location.reload();
 });
 
-
-// Checkout listener and order form validation
-document.getElementById('checkout').addEventListener('click', function(event) {
-	// Prevent the default form submission behavior
-	event.preventDefault();
-	
-	const cartItems = document.querySelectorAll('.cart-item');
-	if (cartItems.length === 0) {
-		alert('Your cart is empty. Please add items to your cart before checking out.');
-		return;
-	}
-
-	// Check if the first form is filled out
-    const firstName = document.getElementById('FName').value;
-    const lastName = document.getElementById('LName').value;
-    const email = document.getElementById('Email').value;
-    const address = document.getElementById('Address').value;
-    const mobile = document.getElementById('Mobile').value;
-    
-    if (!firstName || !lastName || !email || !address || !mobile) {
-        alert('Please fill out all required fields in the order form.');
-        return;
-    }
-
-	// Check phone number length (minimum 7 digits)
-	if (mobile.length < 7) {
-    alert('Phone number should be at least 7 digits.');
-    return;
-	}
-
-    // Check email syntax
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!email.match(emailPattern)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-
-	// Hide the cart container after checkout
-    cartItemsContainer.style.display = 'none';
-
-	// If the cart is not empty and the first form is filled in correctly, trigger the hidden submit button in the first form
-	document.getElementById('hidden-submit').click();
-	
-	// Hide the checkout and clear cart buttons after checkout
-	document.getElementById('checkout').style.display = 'none';
-	document.getElementById('clear-cart').style.display = 'none';
-
-	// Hide the cart heading
-    const cartHeading = document.getElementById('cart-heading');
-    cartHeading.style.display = 'none';
-	
-});
-
-// Function to update the hidden cart items field
-function updateCartItemsHidden() {
-	const cartItems = document.querySelectorAll('.cart-item');
-	const cartItemsData = [];
-
-	cartItems.forEach(item => {
-		cartItemsData.push(item.textContent.trim());
-});
-
-const cartItemsHidden = document.getElementById('cart-items-hidden');
-cartItemsHidden.value = cartItemsData.join(';   ');
-}
-
-	
-// External form listener for inner form (cart-form)
-window.addEventListener("load", function() {
-window.RatufaContainer.loadForm({
-	clientFormID: "cart_form",
-	ratufaFormID: "cdznuino",
-	nodeDomain: "n1.ratufa.io"
-})
-
-});
-
-
-// Hide the loading screen when the page is fully loaded
-window.addEventListener('load', function() {
-  const loadingScreen = document.getElementById('loading-screen');
-  setTimeout(function() {
-      loadingScreen.style.display = 'none';
-  }, 2000); // 3000 milliseconds = 3 seconds
-});
 
 
 
