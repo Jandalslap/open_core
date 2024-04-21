@@ -1,1 +1,1 @@
-visit https://https://open-core-opx.netlify.app
+visit https://open-core-opx.netlify.app
